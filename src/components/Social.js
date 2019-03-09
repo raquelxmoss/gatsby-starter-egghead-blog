@@ -14,10 +14,10 @@ export const Twitter = ({
       color: ${color};
       margin-left: 10px;
       :hover {
-        color: ${theme.brand.primary};
+        color: #BF223C;
       }
     `}
-    aria-label="Visit my Twitter"
+    aria-label="raquelxmoss on Twitter"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -73,10 +73,10 @@ export const GitHub = ({
       margin-left: 10px;
       color: ${color};
       :hover {
-        color: ${theme.brand.primary};
+        color: #BF223C;
       }
     `}
-    aria-label="Visit my GitHub"
+    aria-label="raquelxmoss on Github"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,8 @@ import { bpMaxSM } from 'lib/breakpoints'
 
 const Container = props => {
   const {
-    maxWidth = 600,
+    maxWidth = 900,
+    background = '#EBF4FA',
     noHorizontalPadding = false,
     noVerticalPadding = false,
     ...restProps
@@ -12,6 +13,7 @@ const Container = props => {
   return (
     <div
       css={css`
+        background: ${background};
         width: 100%;
         margin: 0 auto;
         max-width: ${maxWidth + (noHorizontalPadding ? 0 : 80)}px;

@@ -1,26 +1,24 @@
 import { darken, lighten } from 'polished'
 import { fonts } from '../src/lib/typography'
-
+// #C9A2D2 parentbg
+//#404E88 text,etc
+//#EBF4FA secondary bg
+//#0C2231 border
+//
 const brand = {
-  primary: '#0078CC',
-  //primary: '#5348FF',
-  //primary: '#1ABC9C',
-  //primary: '#D42210',
-  //primary: '#D96E0E',
-  //primary: '#9B59B6',
-  //primary: '#6420E5',
-  secondary: '#EEF4F2',
+  primary: '#EBF4FA',
+  secondary: '#EBF4FA',
 }
 
 const colors = {
-  primary_light: `${lighten(0.55, brand.primary)}`,
+  primary_light: `#EBF4FA`,
   gray: '#D3D3D3',
   black: '#000',
   white: '#fff',
-  bg_color: '#fafafa',
-  body_color: 'rgba(0,0,0,0.85)',
-  link_color: brand.primary,
-  link_color_hover: `${darken(0.07, brand.primary)}`,
+  bg_color: '#C9A2D2',
+  body_color: '#404E88',
+  link_color: '#BF223C',
+  link_color_hover: `${lighten(0.2, '#BF223C')}`,
   red: '#E86C60',
   green: '#29B573',
 }

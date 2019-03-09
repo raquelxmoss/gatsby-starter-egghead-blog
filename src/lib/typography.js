@@ -1,33 +1,32 @@
 import Typography from 'typography'
 import '../fonts/fonts.css'
 
+// font-family: 'Playfair Display', serif;
 export const fonts = {
   regular: 'Inter UI Regular',
   regularItalic: 'Inter UI Regular Italic',
-  semibold: 'Inter UI Semibold',
-  semiboldItalic: 'Inter UI Semibold Italic',
-  bold: 'Inter UI Bold',
-  boldItalic: 'Inter UI Bold Italic',
+  bold: 'Playfair Display',
+  boldItalic: 'Playfair Display',
 }
 
 const typography = new Typography({
   baseFontSize: '18px',
-  baseLineHeight: 1.55,
+  baseLineHeight: 1.6,
   headerLineHeight: 1.4,
-  headerFontFamily: [fonts.bold, 'sans-serif'],
+  headerFontFamily: [fonts.bold, 'serif'],
   bodyFontFamily: [fonts.regular, 'sans-serif'],
-  headerColor: 'hsla(0,0%,0%,0.9)',
-  bodyColor: 'hsla(0,0%,0%,0.8)',
+  headerColor: '#404E88',
+  bodyColor: '#404E88',
 
   overrideStyles: ({ rhythm }) => ({
     h1: {
-      color: 'hsla(0,0%,0%,0.75)',
+      color: '#404E88',
     },
     h2: {
-      color: 'hsla(0,0%,0%,0.775)',
+      color: '#404E88',
     },
     h3: {
-      color: 'hsla(0,0%,0%,0.8)',
+      color: '#404E88'
     },
     'h1,h2,h3,h4,h5,h6': {
       lineHeight: 1,

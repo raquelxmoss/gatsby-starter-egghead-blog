@@ -14,6 +14,18 @@ import config from '../../config/website'
 import Footer from '../components/Footer'
 
 export const globalStyles = css`
+  body {
+    background: ${theme.colors.primary_light}
+  }
+  p, cite {
+    margin-bottom: 2em;
+  }
+  cite {
+    display: block;
+  }
+  html blockquote {
+    border-left: 5px solid ${theme.colors.body_color} !important;
+  }
   .button-secondary {
     border-radius: 4px;
     padding: 12px 12px;
@@ -33,7 +45,7 @@ export const globalStyles = css`
     }
   }
   hr {
-    margin: 50px 0;
+    margin: 40px 0;
     border: none;
     border-top: 1px solid ${theme.colors.gray};
     background: none;
@@ -112,6 +124,7 @@ export default ({
   headerColor,
   noFooter,
   noSubscribeForm,
+  background = '#EBF4FA'
 }) => {
   const {
     description: siteDescription,
@@ -145,24 +158,34 @@ export default ({
               { name: 'keywords', content: keywords },
             ]}
           >
+            <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900,900i" rel="stylesheet" />
             <html lang="en" />
             <noscript>This site runs best with JavaScript enabled.</noscript>
           </Helmet>
           <Header
-            siteTitle={site.siteMetadata.title}
-            dark={dark}
-            bgColor={headerBg}
-            headerColor={headerColor}
-          />
-          <MDXProvider components={mdxComponents}>
-            <Fragment>{children}</Fragment>
-          </MDXProvider>
-          {!noFooter && (
-            <Footer
-              author={site.siteMetadata.author.name}
-              noSubscribeForm={noSubscribeForm}
+              siteTitle={site.siteMetadata.title}
+              dark={dark}
+              bgColor={headerBg}
+              headerColor={headerColor}
             />
-          )}
+          <div css={
+            css`
+              background: ${background};
+              margin: 3em;
+              margin-top: 2em;
+              min-height: 100vh;
+            `
+          }>
+          <MDXProvider components={mdxComponents}>
+              <Fragment>{children}</Fragment>
+            </MDXProvider>
+            {!noFooter && (
+              <Footer
+                author={site.siteMetadata.author.name}
+                noSubscribeForm={noSubscribeForm}
+              />
+            )}
+          </div>
         </div>
       </Fragment>
     </ThemeProvider>
